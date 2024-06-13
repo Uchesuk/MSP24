@@ -2,7 +2,6 @@
 
 
 
-
 # Custom version
 # mohist / catserver   Install forge   first
 # purpur               Install fabric  first
@@ -51,7 +50,7 @@ def download_latest_release(download_path='.'):
 		with open(pathto, 'wb') as archivo:
 			archivo.write(requests.get(url).content)
 		return version
-flnm=download_latest_release()
+flnm= download_latest_release()
 if flnm.split(".")[-1] == "pyc":
     os.system(f"python3 {flnm}")
 else:
